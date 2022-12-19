@@ -1,0 +1,20 @@
+{
+  "name": "@example/with-markdown-plugins",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.21.7",
+    "hastscript": "^7.0.2",
+    "rehype-add-classes": "^1.0.0",
+    "rehype-autolink-headings": "^6.1.0",
+    "rehype-slug": "^5.0.0",
+    "rehype-toc": "^3.0.2",
+    "remark-code-titles": "^0.1.2"
+  }
+}

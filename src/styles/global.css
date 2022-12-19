@@ -1,0 +1,54 @@
+body {
+  font-family: system-ui;
+}
+
+.content {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.title {
+  position: relative;
+}
+.title a {
+  opacity: 0;
+  position: absolute;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title a:before {
+  /* position: absolute; */
+  /* right: 100%; */
+  /* display: block; */
+  /* content: "#"; */
+  /* margin-right: 0.2em; */
+}
+
+.title a:hover {
+  opacity: 0.5;
+}
+
+.remark-code-title,
+pre[class^='language-'] {
+  padding: 10px;
+  margin: 0;
+}
+
+.remark-code-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px 4px 0 0;
+  background: rgba(0, 0, 0, 0.08);
+  font-family: monospace;
+  font-weight: bold;
+}
+
+pre[class^='language-'] {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 4px 4px;
+}

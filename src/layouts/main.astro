@@ -1,0 +1,44 @@
+---
+const { content } = Astro.props;
+---
+
+<html lang={ content.lang || 'en' }>
+  <head>
+    <meta charset="utf-8" />
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>{content.title}</title>
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+    <style>
+      .nav {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+      }
+      .nav > * + * {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="content">
+      <svg style="display: none">
+        <!-- https://primer.style/octicons/link-16 -->
+        <!--  https://github.com/janosh/svelte-toc/commit/8493df334a11661eddf03434372f6cd71ea313c1#diff-d7f304dd518dddaa8bf2027b9d4e3a9fc11a3c9b18cf39085bfa162d0076acd3 -->
+        <symbol id="link-icon" fill="currentColor">
+          <path
+            d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"
+          />
+        </symbol>
+    </svg>
+      <header>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+        </nav>
+      </header>
+      <slot />
+    </main>
+  </body>
+</html>
