@@ -8,6 +8,7 @@
 import astroRemark from '@astrojs/markdown-remark';
 
 import rehypePlugin from './rehypePlugin.mjs';
+import rehypeExternalLinks from 'rehype-external-links';
 import { s } from 'hastscript';
 
 // console.debug(rehypeSlug);
@@ -35,6 +36,13 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
                 // symbol #link-icon defined in app.html
                 s(`use`, { 'xlink:href': `#link-icon` })
               ),
+            },
+          ],
+          [
+            'rehype-external-links',
+            {
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
           ],
           ['rehype-toc', { headings: ['h2', 'h3'] }],
